@@ -161,8 +161,9 @@ Then, in your HTML `<head>`, replace the embedded `<style>` with a link to your 
 * Makes it easier to maintain and update CSS for multiple pages.
 * Works seamlessly with Bootstrap 5 grid and your responsive design.
 
+# when you want to save your in github 
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git branch -M master
 git remote add origin https://github.com/G4vi333/my-portfolio.0.1.git
@@ -174,5 +175,5 @@ first save your file
 git status-track files
 git add .
 git add the name of the file you change
-git co;;it -m"write something to descripes what you change in your file it not necessary be longer"
+git commit -m"write something to descripes what you change in your file it not necessary be longer"
 git push origin master 
