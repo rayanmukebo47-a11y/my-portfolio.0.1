@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Tech Conference 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ===== MOBILE-FIRST BASE ===== */
+
+        /* Banner / Header */
+        .banner {
+            min-height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .banner h1, .banner p {
+            max-width: 500px;
+        }
+
+        /* Activities Grid */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile first */
+            gap: 20px;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile first: stack vertically */
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .schedule div {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+
+        /* Speaker Cards */
+        .speaker-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        .speaker-card h5 {
+            margin-top: 10px;
+        }
+        .speaker-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* ===== MEDIA QUERIES ===== */
+        @media (min-width: 768px) {
+            /* Activities 2 columns for tablet */
+            .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            /* Schedule: 3 columns for tablet+ */
+            .schedule {
+                grid-template-columns: 1fr 3fr 2fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            /* Activities 4 columns for desktop */
+            .activities-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar bg-dark text-white p-3">
+        <div class="container">
+            <h3 class="m-0">Future Tech 2026</h3>
+        </div>
+    </nav>
+
+    <!-- Header / Banner -->
+    <header class="banner">
+        <h1>Future Tech Conference</h1>
+        <p>Innovating the Next Generation of Technology</p>
+        <div class="mt-3">
+            <button class="btn btn-primary btn-lg">Register Now</button>
+        </div>
+    </header>
+
+    <!-- Speakers Section -->
+    <section class="page container py-5">
+        <h2 class="text-center mb-4">Speakers</h2>
+        <div class="row g-4">
+            <!-- Each speaker is full-width on mobile, 2 per row tablet, 3 per row desktop -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 1">
+                    <div class="card-body">
+                        <h5>John Doe</h5>
+                        <p>AI Researcher & Tech Innovator</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 2">
+                    <div class="card-body">
+                        <h5>Jane Smith</h5>
+                        <p>Cloud Computing Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 3">
+                    <div class="card-body">
+                        <h5>Mark Wilson</h5>
+                        <p>Full-Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 4">
+                    <div class="card-body">
+                        <h5>Emily Johnson</h5>
+                        <p>Cybersecurity Expert</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 5">
+                    <div class="card-body">
+                        <h5>Chris Lee</h5>
+                        <p>Blockchain Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card speaker-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Speaker 6">
+                    <div class="card-body">
+                        <h5>Sarah Brown</h5>
+                        <p>UX/UI Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities container py-5">
+        <h2 class="text-center mb-4">Activities</h2>
+        <div class="activities-grid">
+            <div class="box">Workshops</div>
+            <div class="box">Networking</div>
+            <div class="box">Live Coding</div>
+            <div class="box">Startup Pitch</div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Schedule</h2>
+        <div class="schedule">
+            <div class="time"><strong>10:00 AM</strong></div>
+            <div class="session"><strong>Opening Keynote: The Future of Tech</strong></div>
+            <div class="speaker"><strong>John Doe</strong></div>
+
+            <div class="time"><strong>11:00 AM</strong></div>
+            <div class="session"><strong>Session 1: AI and Machine Learning</strong></div>
+            <div class="speaker"><strong>Jane Smith</strong></div>
+
+            <div class="time"><strong>12:00 PM</strong></div>
+            <div class="session"><strong>Session 2: Cloud Computing</strong></div>
+            <div class="speaker"><strong>Mark Wilson</strong></div>
+
+            <div class="time"><strong>1:00 PM</strong></div>
+            <div class="session"><strong>Session 3: Cybersecurity Trends</strong></div>
+            <div class="speaker"><strong>Emily Johnson</strong></div>
+
+            <div class="time"><strong>2:00 PM</strong></div>
+            <div class="session"><strong>Session 4: Blockchain and its Applications</strong></div>
+            <div class="speaker"><strong>Chris Lee</strong></div>
+        </div>
+    </section>
+
+</body>
+</html>

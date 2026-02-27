@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Conference Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        /* ===== SCHEDULE SECTION USING PURE CSS GRID ===== */
+        .schedule {
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr; /* 3 columns: Time, Session, Speaker */
+            gap: 20px; /* Space between columns and rows */
+            margin-top: 40px;
+        }
+
+        /* Styling for the schedule row */
+        .schedule .time, .schedule .session, .schedule .speaker {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .schedule {
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- SCHEDULE SECTION -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Schedule</h2>
+        
+        <!-- Pure CSS Grid Schedule Layout -->
+        <div class="schedule">
+            <!-- Row 1 -->
+            <div class="time"><strong>10:00 AM</strong></div>
+            <div class="session"><strong>Opening Keynote: The Future of Tech</strong></div>
+            <div class="speaker"><strong>John Doe</strong></div>
+
+            <!-- Row 2 -->
+            <div class="time"><strong>11:00 AM</strong></div>
+            <div class="session"><strong>Session 1: AI and Machine Learning</strong></div>
+            <div class="speaker"><strong>Jane Smith</strong></div>
+
+            <!-- Row 3 -->
+            <div class="time"><strong>12:00 PM</strong></div>
+            <div class="session"><strong>Session 2: Cloud Computing</strong></div>
+            <div class="speaker"><strong>Mark Wilson</strong></div>
+
+            <!-- Row 4 -->
+            <div class="time"><strong>1:00 PM</strong></div>
+            <div class="session"><strong>Session 3: Cybersecurity Trends</strong></div>
+            <div class="speaker"><strong>Emily Johnson</strong></div>
+
+            <!-- Row 5 -->
+            <div class="time"><strong>2:00 PM</strong></div>
+            <div class="session"><strong>Session 4: Blockchain and its Applications</strong></div>
+            <div class="speaker"><strong>Chris Lee</strong></div>
+        </div>
+    </div>
+
+</body>
+</html>

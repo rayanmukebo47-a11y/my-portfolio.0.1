@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Conference bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ===== MOBILE FIRST ===== */
+
+        /* Header / Banner */
+        .banner {
+            min-height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Activities section using CSS GRID */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile: 1 column */
+            gap: 20px;
+        }
+        @media (min-width: 768px) { .activities-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 992px) { .activities-grid { grid-template-columns: repeat(4, 1fr); } }
+
+        .box {
+            background: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Card Styling */
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar bg-dark text-white p-3">
+        <div class="container">
+            <h3 class="m-0">Future Tech 2026</h3>
+        </div>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <div class="banner">
+        <h1>Future Tech Conference</h1>
+        <p>Innovating the Next Generation of Technology</p>
+        <div class="skills mt-3">
+            <button class="btn btn-outline-primary btn-lg">Register Now</button>
+        </div>
+    </div>
+
+    <!-- SPEAKERS SECTION (Bootstrap Grid) -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Speakers</h2>
+        <div class="row g-4">
+            <!-- Speaker Cards -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Speaker 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="card-text">AI Researcher at TechLabs. Passionate about the future of AI and machine learning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Speaker 2">
+                    <div class="card-body">
+                        <h5 class="card-title">David Lee</h5>
+                        <p class="card-text">Cloud Computing Expert with a focus on scalable infrastructures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Speaker 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Emma Wilson</h5>
+                        <p class="card-text">Cybersecurity Specialist and a leader in online safety strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Speaker 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Brown</h5>
+                        <p class="card-text">Blockchain Developer working on next-gen decentralized systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Speaker 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Olivia Davis</h5>
+                        <p class="card-text">UX/UI Designer focusing on user-centric digital experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Speaker 6">
+                    <div class="card-body">
+                        <h5 class="card-title">James Taylor</h5>
+                        <p class="card-text">Full-Stack Developer with a passion for building scalable applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACTIVITIES SECTION (CSS GRID) -->
+    <div class="activities container py-5">
+        <h2 class="text-center mb-4">Activities</h2>
+        <div class="activities-grid">
+            <div class="box">Workshops</div>
+            <div class="box">Networking</div>
+            <div class="box">Live Coding</div>
+            <div class="box">Startup Pitch</div>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
